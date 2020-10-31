@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_main"
+    android:paddingTop="24dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,8 +16,7 @@
         android:id="@+id/frg_main__toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
-        app:titleTextColor="@color/white"
+        android:background="?attr/colorOnPrimary"
         app:navigationIcon="@drawable/ic_baseline_menu_24"
         app:title="@string/app_name"
         app:layout_constraintTop_toTopOf="parent"

@@ -23,11 +23,8 @@ class AnimateSupportAppNavigator(
             fragmentTransaction: FragmentTransaction) {
 
         when (currentFragment) {
-            is MainFragment -> {
-                fragmentTransaction.setCustomAnimations(R.anim.main_fragment_enter, R.anim.main_fragment_exit)
-            }
-            is ProfileFragment -> {
-                fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit)
+            is MainFragment, is ProfileFragment -> {
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left)
             }
         }
 

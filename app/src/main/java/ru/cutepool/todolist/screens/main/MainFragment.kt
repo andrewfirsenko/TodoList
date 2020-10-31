@@ -36,6 +36,8 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
+        container?.clipToPadding = false
+        container?.clipChildren = false
 
         with(view) {
             frg_main__list_notes.layoutManager =
@@ -47,6 +49,7 @@ class MainFragment : Fragment() {
             }
 
             frg_main__toolbar.setOnClickListener {
+//                this.setBackgroundResource(R.drawable.background_main)
                 viewModel.toProfileScreen()
             }
         }

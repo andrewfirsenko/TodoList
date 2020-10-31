@@ -10,9 +10,7 @@ import ru.cutepool.todolist.data.local.DatabaseBuilder
 import ru.cutepool.todolist.data.local.DatabaseHelperImpl
 import ru.cutepool.todolist.screens.main.MainFragment
 import ru.cutepool.todolist.screens.profile.ProfileFragment
-import ru.cutepool.todolist.utils.AnimateSupportAppNavigator
 import ru.cutepool.todolist.utils.CiceroneHelper
-import ru.terrakok.cicerone.android.pure.AppNavigator
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
 import ru.terrakok.cicerone.commands.Command
 
@@ -28,10 +26,10 @@ class MainActivity : AppCompatActivity() {
 
             when (currentFragment) {
                 is MainFragment -> {
-                    fragmentTransaction.setCustomAnimations(R.anim.main_fragment_enter, R.anim.main_fragment_exit)
+                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
                 }
                 is ProfileFragment -> {
-                    fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit)
+                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                 }
             }
 
